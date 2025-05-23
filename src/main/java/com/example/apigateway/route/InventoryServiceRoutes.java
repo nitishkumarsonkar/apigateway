@@ -13,7 +13,7 @@ public class InventoryServiceRoutes {
         return GatewayRouterFunctions.route("inventory-service")
                 .route(RequestPredicates.path("/api/v1/inventory/venue/{venueId}"),
                         request -> forwardWithPathVariable(request, "venueId",
-                                "http://localhost:8081/api/v1/inventory/venue/"))
+                                "http://localhost:8080/api/v1/inventory/venue/"))
                 .route(RequestPredicates.path("/api/v1/inventory/event/{eventId}"),
                         request -> forwardWithPathVariable(request, "eventId",
                                 "http://localhost:8081/api/v1/inventory/event/"))
